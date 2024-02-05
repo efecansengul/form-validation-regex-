@@ -1,0 +1,67 @@
+.formInput {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 0.5em;
+  width: 24em;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.formInput > label {
+  font-weight: 600;
+  margin-left: 1rem;
+  font-size: 0.875rem;
+}
+.formInput > input {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  line-height: 2rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  flex-wrap: wrap;
+}
+span {
+  color: red;
+  font-size: 12px;
+  text-align: start;
+  margin-left: 1.4rem;
+  line-height: 0.8rem;
+  display: none;
+}
+input:invalid[focused="true"] {
+  border: 0.5px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+@media screen and (max-width: 400px) {
+  .formInput {
+    display: flex;
+    width: auto;
+  }
+
+  .formInput > input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .formInput > span {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  .formInput > label {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+  }
+}
